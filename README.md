@@ -1,73 +1,28 @@
-# React + TypeScript + Vite
+🌤️ WeatherNow — Primer proyecto usando una API real
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es importante para mí porque fue el momento en el que dejé de trabajar solo con datos “inventados” y empecé a consumir información real desde una API externa.
 
-Currently, two official plugins are available:
+No es una app compleja, pero sí es un paso clave en mi aprendizaje.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔎 ¿Qué hace?
 
-## React Compiler
+Permite buscar el clima de una ciudad y mostrar los datos básicos.
+El objetivo principal no era el diseño ni añadir mil opciones, sino entender bien cómo funciona la asincronía y el consumo de una API.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🧠 Qué he aprendido con este proyecto
+	•	Async / Await: a entender cómo esperar respuestas de una API sin bloquear la app.
+	•	Separar responsabilidades: la lógica de las peticiones está separada de los componentes para que el código sea más claro y fácil de mantener.
+	•	TypeScript: uso de interfaces para trabajar con datos reales y evitar errores tontos.
+	•	Manejo de errores: validar la búsqueda y mostrar mensajes cuando algo falla (ciudad inexistente, error de red, etc.).
+	•	Variables de entorno: proteger la API key usando .env.
 
-## Expanding the ESLint configuration
+🧰 Tecnologías usadas
+	•	React + Vite
+	•	TypeScript
+	•	CSS
+	•	OpenWeather API
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📝 Nota personal
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Este proyecto me ayudó a entender que programar no es solo “que funcione”, sino saber qué está pasando en cada paso.
+Me costó, me equivoqué varias veces, pero ahora tengo mucho más claro cómo se comunican una app y un servidor externo.
